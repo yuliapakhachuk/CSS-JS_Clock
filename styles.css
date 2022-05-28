@@ -1,6 +1,5 @@
         html {
-background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 
             background-size: cover;
             font-family: 'helvetica neue';
@@ -9,15 +8,15 @@ background: rgb(238, 174, 202);
         }
 
         body {
-            margin: 0;
-            font-size: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             flex: 1;
             min-height: 100vh;
             align-items: center;
-            padding: 100px;
+
+            margin: 0;
+            font-size: 2rem;
         }
         h1 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +25,6 @@ background: rgb(238, 174, 202);
             font-weight: 400;
 
             color: aliceblue;
-
         }
 
         .clock {
@@ -63,15 +61,17 @@ background: rgb(238, 174, 202);
             transform-origin: right;
 
             transition-property: transform;
-            transition-duration: 0.05s;
-            transition-timing-function: cubic-bezier(0, 1.61, 0.96, 0.48);
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0, 1.75, 0.69, 0.06);
         }
         .second-hand {
             background-color: rgb(222 131 171);
         }
-        /* .hour-hand {
-            width: 40%;
-        } */
+        .hour-hand {
+            position: relative;
+            left: 50px;
+            width: 100px;
+        }
         .center {
             width: 1px;
             height: 1px;
@@ -83,5 +83,10 @@ background: rgb(238, 174, 202);
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 1rem;
-            box-shadow: 0 0 0 4px rgb(0 0 0 / 10%), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgb(0 0 0 / 20%);        
+            box-shadow: 
+                        0 0 0 4px 
+                        rgb(0 0 0 / 10%), 
+                        inset 0 0 0 3px #efefef, 
+                        inset 0 0 10px black,
+                        0 0 10px rgb(0 0 0 / 20%);        
         }
